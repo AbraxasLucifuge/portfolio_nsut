@@ -68,13 +68,14 @@ function Circle(x, y,dx,dy, radius){
 
         //interactivity
 
-        if(mouse.x - this.x <50 && mouse.x -this.x >-50 &&
-            mouse.y -this.y <50 && mouse.y - this.y >-50 &&this.radius < maxRadius){
-            this.radius+=1;
-        }else if(this.radius>this.minradius){
-            this.radius-=1;
+        if(window.innerWidth>500){
+            if(mouse.x - this.x <50 && mouse.x -this.x >-50 &&
+                mouse.y -this.y <50 && mouse.y - this.y >-50 &&this.radius < maxRadius){
+                this.radius+=1;
+            }else if(this.radius>this.minradius){
+                this.radius-=1;
+            }
         }
-
                    
         this.x+=this.dx;
         this.y+=this.dy;
